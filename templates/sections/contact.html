@@ -1,0 +1,18 @@
+<section class="section" id="{{ section.id }}">
+  <div class="section-inner section-narrow">
+    <h2 class="section-title"><span class="mono section-label">[ handshake ]</span> {{ section.title }}</h2>
+    <div class="contact-card card">
+      <p class="contact-lede">{{ profile.availability }}</p>
+      <p>
+        Whether it's a Unity digital-twin build, a point-cloud processing pipeline,
+        or a computer-vision research problem — I'd love to hear about it.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+        {% for link in profile.social if link.icon != 'mail' %}
+        <a class="btn btn-ghost" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} ↗</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

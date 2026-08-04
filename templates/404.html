@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}404 — {{ profile.name }}{% endblock %}
+
+{% block content %}
+<section class="section page-top">
+  <div class="section-inner section-narrow" style="text-align:center">
+    <p class="mono section-label">[ error: point not found in cloud ]</p>
+    <h1 class="post-title">404</h1>
+    <p>This page doesn't exist — or hasn't been scanned yet.</p>
+    <p class="section-more"><a class="btn btn-primary" href="{{ url_for('index') }}">Back home</a></p>
+  </div>
+</section>
+{% endblock %}

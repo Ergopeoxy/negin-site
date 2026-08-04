@@ -1,0 +1,21 @@
+<section class="section" id="{{ section.id }}">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="mono section-label">[ foundations ]</span> {{ section.title }}</h2>
+    <div class="education-grid">
+      {% for edu in section["items"] %}
+      <article class="card">
+        <header class="job-header">
+          <div>
+            <h3 class="job-role">{{ edu.degree }}</h3>
+            <p class="job-company">{{ edu.school }}</p>
+          </div>
+          <p class="job-period mono">{{ edu.period }}</p>
+        </header>
+        <ul class="job-points">
+          {% for point in edu.points %}<li>{{ point }}</li>{% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

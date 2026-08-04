@@ -1,0 +1,28 @@
+<section class="section" id="{{ section.id }}">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="mono section-label">[ trajectory ]</span> {{ section.title }}</h2>
+    <div class="timeline">
+      {% for job in section["items"] %}
+      <article class="timeline-item card">
+        <header class="job-header">
+          <div>
+            <h3 class="job-role">{{ job.role }}</h3>
+            <p class="job-company">{{ job.company }}</p>
+          </div>
+          <p class="job-period mono">{{ job.period }}</p>
+        </header>
+        <ul class="job-points">
+          {% for point in job.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+        {% if job.tags %}
+        <ul class="tag-list">
+          {% for tag in job.tags %}<li class="tag mono">{{ tag }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

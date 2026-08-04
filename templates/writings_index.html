@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Writings — {{ profile.name }}{% endblock %}
+
+{% block content %}
+<section class="section page-top" id="writings-all">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="mono section-label">[ log — full ]</span> Writings</h2>
+    <div class="writings-grid">
+      {% for post in writings %}
+      <a class="writing-card card" href="{{ url_for('writing_post', slug=post.slug) }}">
+        <p class="writing-date mono">{{ post.date }}</p>
+        <h3 class="writing-title">{{ post.title }}</h3>
+        <p class="writing-summary">{{ post.summary }}</p>
+        {% if post.tags %}
+        <ul class="tag-list">
+          {% for tag in post.tags %}<li class="tag mono">{{ tag }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </a>
+      {% else %}
+      <p class="mono">No posts yet — add a Markdown file to <code>content/writings/</code>.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

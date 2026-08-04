@@ -1,0 +1,21 @@
+<section class="section" id="{{ section.id }}">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="mono section-label">[ log ]</span> {{ section.title }}</h2>
+    <p class="section-lede">Notes on point clouds, computer vision, and whatever else I'm thinking about.</p>
+    <div class="writings-grid">
+      {% for post in writings %}
+      <a class="writing-card card" href="{{ url_for('writing_post', slug=post.slug) }}">
+        <p class="writing-date mono">{{ post.date }}</p>
+        <h3 class="writing-title">{{ post.title }}</h3>
+        <p class="writing-summary">{{ post.summary }}</p>
+        {% if post.tags %}
+        <ul class="tag-list">
+          {% for tag in post.tags %}<li class="tag mono">{{ tag }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    <p class="section-more"><a class="btn btn-ghost" href="{{ url_for('writings_index') }}">All writings →</a></p>
+  </div>
+</section>

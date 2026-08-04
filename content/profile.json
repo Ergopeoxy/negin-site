@@ -1,0 +1,13 @@
+{
+  "name": "Negin Amou",
+  "role": "Digital Twin Developer · Analyst  . AI & Computer Vision Researcher",
+  "tagline": "I'm a developer and analyst at heart. From digital twins to computer vision and AI, what I do best is learn fast and adapt to whatever the problem needs",
+  "location": "Ontario, Canada",
+  "email": "neginamou1378@gmail.com",
+  "availability": "Open to contract work in computer vision, Unity digital twins, and AI development.",
+  "social": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/negin-amou-1142162b1", "icon": "linkedin" },
+    { "label": "GitHub", "url": "https://github.com/Ergopeoxy", "icon": "github" },
+    { "label": "Email", "url": "mailto:neginamou1378@gmail.com", "icon": "mail" }
+  ]
+}

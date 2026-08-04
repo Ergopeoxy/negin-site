@@ -1,0 +1,71 @@
+[
+  {
+    "company": "PACE Building Technologies",
+    "role": "Digital Twin Developer / Analyst",
+    "period": "Jan 2025 – Present",
+    "tags": ["Unity", "C#", "Point Clouds", "Gaussian Splats", "CAD"],
+    "points": [
+      "Develop interactive, walkable digital-twin environments in Unity for visualizing and analyzing complex industrial assets.",
+      "Built runtime workflows for importing, processing, rendering, and interacting with large point-cloud datasets and Gaussian splats.",
+      "Designed and optimized spatial collision-detection algorithms for point-cloud and CAD geometry, improving runtime performance and user interaction.",
+      "Implemented a runtime CAD import pipeline so engineering models can be converted, visualized, and manipulated inside Unity."
+    ]
+  },
+  {
+    "company": "PhotoMedicine Labs · University of Waterloo",
+    "role": "AI & Software Developer",
+    "period": "Sep 2025 – Dec 2025",
+    "tags": ["GANs", "Python", "C++", "Flask", "Medical Imaging"],
+    "points": [
+      "Reproduced and validated the lab's virtual multi-staining deep learning pipeline (CycleGAN, RegGAN, Pix2Pix) on the dual-excitation PARS microscopy dataset.",
+      "Implemented full training and inference pipelines for virtual H&E staining, with hyperparameter tuning to reproduce published results.",
+      "Built a Flask GUI for the PARS virtual staining library to streamline internal testing and data visualization.",
+      "Programmed AlazarTech ATS digitizer cards in C++ (with an ImGui front end) for synchronized laser / actuator / digitizer triggering in real-time PARS imaging."
+    ]
+  },
+  {
+    "company": "Computer Vision for Smart Structure Lab · University of Waterloo",
+    "role": "AI Computer Vision Researcher / Developer",
+    "period": "May 2025 – Dec 2025",
+    "tags": ["Point Cloud Segmentation", "Machine Learning", "Flask", "Postgres"],
+    "points": [
+      "Automated segmentation and templating of large-scale 3D point clouds by training AI models, sponsored by Ontario Power Generation under Prof. Haas.",
+      "Developed a Bill of Materials application with Flask and Postgres to store and categorize structural components.",
+      "Built automated and human-guided methods to estimate a point cloud's area, volume, and shape category for industrial components (beams, columns, floors).",
+      "Working toward publishing the segmentation and automation research."
+    ]
+  },
+  {
+    "company": "Action Aero",
+    "role": "IT Analyst",
+    "period": "May 2021 – Aug 2024",
+    "tags": ["C#", "PHP", "Python", "Oracle", "Power BI"],
+    "points": [
+      "Programmed, documented, and debugged in-house software including a Shipment Estimator, CRM, and OEM tooling.",
+      "Automated daily processes with PowerShell and Python scripting.",
+      "Built need-based applications in C# (WinForms/WPF) and PHP over Oracle and MySQL databases.",
+      "Analyzed production, inventory, and turnaround data with Crystal Reports, Power BI, and Excel."
+    ]
+  },
+  {
+    "company": "Maximus Canada",
+    "role": "Angular Developer",
+    "period": "Jan 2021 – Apr 2021",
+    "tags": ["Angular", "TypeScript", "CI/CD"],
+    "points": [
+      "Developed web applications with Angular and TypeScript from functional specifications.",
+      "Wrote unit and integration tests and supported test and production environments, using CI/CD for reliable builds."
+    ]
+  },
+  {
+    "company": "Invesco Ltd.",
+    "role": "Cybersecurity Analyst",
+    "period": "Sep 2020 – Dec 2020",
+    "tags": ["SIEM", "QRadar", "OSINT", "Incident Response"],
+    "points": [
+      "Worked with SIEM tooling (IBM QRadar, CrowdStrike, VirusTotal) to detect and respond to cyber threats.",
+      "Automated firewall threat detection with MineMeld, aggregating OSINT threat intelligence.",
+      "Set up firewall rules during incident response and reported on emerging CVEs and breaches."
+    ]
+  }
+]

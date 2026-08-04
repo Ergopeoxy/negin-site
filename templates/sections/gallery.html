@@ -1,0 +1,13 @@
+<section class="section" id="{{ section.id }}">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="mono section-label">[ frames ]</span> {{ section.title }}</h2>
+    <div class="gallery-grid">
+      {% for item in section["items"] %}
+      <figure class="card gallery-item">
+        <img src="{{ url_for('static', filename=item.src) }}" alt="{{ item.caption }}" loading="lazy">
+        <figcaption class="mono">{{ item.caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

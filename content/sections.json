@@ -1,0 +1,55 @@
+[
+  {
+    "id": "about",
+    "template": "sections/about.html",
+    "title": "About",
+    "nav": true,
+    "enabled": true
+  },
+  {
+    "id": "experience",
+    "template": "sections/experience.html",
+    "title": "Experience",
+    "nav": true,
+    "enabled": true,
+    "data": "experience.json"
+  },
+  {
+    "id": "skills",
+    "template": "sections/skills.html",
+    "title": "Skills",
+    "nav": true,
+    "enabled": true,
+    "data": "skills.json"
+  },
+  {
+    "id": "writings",
+    "template": "sections/writings.html",
+    "title": "Writings",
+    "nav": true,
+    "enabled": true
+  },
+  {
+    "id": "education",
+    "template": "sections/education.html",
+    "title": "Education",
+    "nav": true,
+    "enabled": true,
+    "data": "education.json"
+  },
+  {
+    "id": "contact",
+    "template": "sections/contact.html",
+    "title": "Contact",
+    "nav": true,
+    "enabled": true
+  },
+  {
+  "id": "gallery",
+  "template": "sections/gallery.html",
+  "title": "Gallery",
+  "nav": true,
+  "enabled": true,
+  "data": "gallery.json"
+}
+]

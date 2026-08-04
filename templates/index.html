@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block nav %}
+  {# Nav is generated from the enabled sections that opted into it #}
+  {% for section in sections if section.nav %}
+  <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+  {% endfor %}
+  <li><a href="{{ url_for('writings_index') }}" class="nav-cta">All writings ↗</a></li>
+{% endblock %}
+
+{% block content %}
+
+  <!-- ================================================== hero -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="hero-eyebrow mono">[ scanning: profile.pcd — 100% ]</p>
+      <img class="hero-photo" src="{{ url_for('static', filename='img/negin.jpg') }}" alt="Negin Amou">
+      <h1 class="hero-name">{{ profile.name }}</h1>
+      <p class="hero-role">{{ profile.role }}</p>
+      <p class="hero-tagline">{{ profile.tagline }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Work with me</a>
+        <a class="btn btn-ghost" href="#experience">See my experience</a>
+      </div>
+      <p class="hero-availability mono">▸ {{ profile.availability }}</p>
+    </div>
+    <p class="hero-hint mono" aria-hidden="true">move your mouse — the cloud reacts</p>
+  </section>
+
+  <!-- ================================================== modular sections -->
+  {% for section in sections %}
+    {% include section.template %}
+  {% endfor %}
+
+{% endblock %}

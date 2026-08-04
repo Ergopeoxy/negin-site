@@ -1,0 +1,15 @@
+<section class="section" id="{{ section.id }}">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="mono section-label">[ toolset ]</span> {{ section.title }}</h2>
+    <div class="skills-grid">
+      {% for group in section["items"] %}
+      <div class="skill-group card">
+        <h3 class="skill-group-title mono">{{ group.group }}</h3>
+        <ul class="tag-list">
+          {% for skill in group.skills %}<li class="tag mono">{{ skill }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

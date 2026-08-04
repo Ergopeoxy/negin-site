@@ -1,0 +1,22 @@
+[
+  {
+    "school": "University of Waterloo",
+    "degree": "Master of Data Science and Artificial Intelligence",
+    "period": "Sep 2024 – Dec 2025",
+    "points": [
+      "CGPA 3.9 / 4",
+      "Scotiabank Entrance Scholarship (CAD 10,000)",
+      "Teaching Assistant for CS 136L"
+    ]
+  },
+  {
+    "school": "University of Prince Edward Island",
+    "degree": "B.Sc. Computer Science & Mathematics",
+    "period": "Sep 2019 – May 2023",
+    "points": [
+      "CGPA 4.24 / 4.3 — Graduating Student Award for highest GPA in the School of Mathematical and Computational Sciences",
+      "Academic Excellence Award (2019–2023), Dean's Honours List",
+      "Authored technical papers on OSINT, network security, web application security, cryptography, and AI in cybersecurity"
+    ]
+  }
+]

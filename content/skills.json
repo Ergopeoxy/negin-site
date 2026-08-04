@@ -1,0 +1,22 @@
+[
+  {
+    "group": "3D & Digital Twins",
+    "skills": ["Unity", "Point Cloud Processing", "Gaussian Splats", "CAD Pipelines", "Spatial Collision Detection", "Runtime Rendering"]
+  },
+  {
+    "group": "AI & Computer Vision",
+    "skills": ["Deep Learning (CNNs)", "GANs (CycleGAN, Pix2Pix, RegGAN)", "Point Cloud Segmentation", "LLMs", "Generative AI", "Model Training & Tuning"]
+  },
+  {
+    "group": "Languages & Frameworks",
+    "skills": ["Python", "C# (.NET, WPF, Unity)", "C++", "Flask", "PHP", "JavaScript", "TypeScript / Angular", "HTML & CSS"]
+  },
+  {
+    "group": "Data & Infrastructure",
+    "skills": ["PostgreSQL", "Oracle", "MySQL", "REST APIs", "DevOps / MLOps", "CI/CD (GitHub Actions)", "Power BI"]
+  },
+  {
+    "group": "Security",
+    "skills": ["SIEM (IBM QRadar)", "OSINT", "Incident Response", "Secure Development Practices"]
+  }
+]
