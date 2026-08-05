@@ -52,6 +52,8 @@ def load_enabled_sections():
             continue
         if "data" in section:
             section["items"] = _load_json(section["data"])
+        if "scan_images" in section:
+            section["items"] = load_gallery_items(section["scan_images"])
         sections.append(section)
     return sections
 
@@ -95,3 +97,25 @@ def load_writings(limit=None):
 def get_writing(slug):
     path = WRITINGS_DIR / f"{slug}.md"
     return _parse_post(path) if path.exists() else None
+
+IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp"}
+
+def load_gallery_items(folder):
+    """Scan static/<folder> for images. Captions come from gallery.json
+    if a matching entry exists; otherwise the filename becomes the caption."""
+    captions = {}
+    cap_file = CONTENT_DIR / "gallery.json"
+    if cap_file.exists():
+        with open(cap_file, encoding="utf-8") as f:
+            captions = {item["src"]: item.get("caption", "") for item in json.load(f)}
+
+    static_dir = CONTENT_DIR.parent / "static"
+    items = []
+    for p in sorted((static_dir / folder).glob("*")):
+        if p.suffix.lower() in IMAGE_EXTS:
+            src = f"{folder}/{p.name}"
+            items.append({
+                "src": src,
+                "caption": captions.get(src, p.stem.replace("-", " ").replace("_", " ")),
+            })
+    return items

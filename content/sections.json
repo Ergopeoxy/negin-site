@@ -50,6 +50,6 @@
   "title": "Gallery",
   "nav": true,
   "enabled": true,
-  "data": "gallery.json"
+  "scan_images": "img/gallery"
 }
 ]

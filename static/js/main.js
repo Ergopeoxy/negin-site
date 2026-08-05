@@ -38,4 +38,42 @@
       observer.observe(el);
     });
   }
+
+
+  // Gallery carousel arrows
+  document.querySelectorAll(".carousel").forEach((carousel) => {
+    const track = carousel.querySelector(".carousel-track");
+    const step = () => track.querySelector(".gallery-item").offsetWidth + 20;
+    carousel.querySelector(".prev").addEventListener("click", () =>
+      track.scrollBy({ left: -step(), behavior: "smooth" }));
+    carousel.querySelector(".next").addEventListener("click", () =>
+      track.scrollBy({ left: step(), behavior: "smooth" }));
+  });
+
+    // Gallery lightbox — click a card to view full size
+  const galleryImgs = document.querySelectorAll(".gallery-item img");
+  if (galleryImgs.length) {
+    const lightbox = document.createElement("figure");
+    lightbox.className = "lightbox";
+    lightbox.innerHTML = "<img alt=''><figcaption></figcaption>";
+    document.body.appendChild(lightbox);
+    const lbImg = lightbox.querySelector("img");
+    const lbCap = lightbox.querySelector("figcaption");
+
+    galleryImgs.forEach((img) => {
+      img.addEventListener("click", () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbCap.textContent = img.alt;
+        lightbox.classList.add("open");
+      });
+    });
+
+    lightbox.addEventListener("click", () => lightbox.classList.remove("open"));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") lightbox.classList.remove("open");
+    });
+  }
+
+
 })();

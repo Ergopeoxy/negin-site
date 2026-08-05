@@ -538,14 +538,45 @@ a:hover { text-decoration: underline; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .writing-card:hover { transform: none; }
 }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.2rem;
+
+
+
+/* gallery*/
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
-.gallery-item { padding: 0.8rem; margin: 0; }
-.gallery-item img {
+.carousel-track {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 0.6rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.gallery-item {
+  flex: 0 0 min(320px, 80vw);
+  scroll-snap-align: center;
+  padding: 0.8rem;
+  margin: 0;
+}
+/* .gallery-item img {
   width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+} */
+ .gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;   /* was: cover */
+  background: var(--surface-solid);  /* fills the empty bars */
   display: block;
   border-radius: 3px;
   border: 1px solid var(--line);
@@ -555,6 +586,55 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
   margin-top: 0.6rem;
 }
+.carousel-btn {
+  flex: 0 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0.5rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.carousel-btn:hover { border-color: var(--cyan); background: var(--cyan-dim); }
+.gallery-item {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  cursor: zoom-in;
+}
+.gallery-item:hover {
+  transform: scale(1.06);
+  border-color: var(--cyan);
+  z-index: 2;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 10, 20, 0.92);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 100;
+  cursor: zoom-out;
+  padding: 2rem;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: min(92vw, 1100px);
+  max-height: 82vh;
+  border: 1px solid var(--cyan);
+  border-radius: 3px;
+  box-shadow: 0 0 40px rgba(63, 224, 230, 0.25);
+}
+.lightbox figcaption {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+/* initial photo*/
 .hero-photo {
   width: 128px;
   height: 128px;
