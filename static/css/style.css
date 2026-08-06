@@ -644,3 +644,20 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 0 24px rgba(63, 224, 230, 0.35);
   margin-bottom: 1.2rem;
 }
+
+/*learn fast meme*/
+.about-meme {
+  margin: 1.6rem auto 0;
+  max-width: 300px;
+}
+.about-meme img {
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+}
+.about-meme figcaption {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,35 @@
+{
+  "active_index": 0,
+  "descriptions": [
+    "Negin Amou — digital twin developer and AI researcher. Unity, point clouds, computer vision, and machine learning. Open to contract work.",
+    "Portfolio of Negin Amou: walkable Unity digital twins, point cloud segmentation research, GANs for medical imaging, and writings on 3D and AI.",
+    "Negin Amou builds interactive 3D environments from point clouds and trains the AI models that understand them. Based in Ontario, Canada."
+  ],
+  "base_keywords": [
+    "Negin Amou", "software developer", "software engineer", "full stack developer",
+    "Python developer", "C# developer", "Unity developer", "3D developer",
+    "digital twin", "digital twin developer", "computer vision", "machine learning",
+    "artificial intelligence", "AI developer", "AI researcher", "deep learning",
+    "data science", "data scientist", "contract developer", "freelance developer",
+    "software contractor", "Ontario developer", "Canada developer", "Waterloo",
+    "point cloud", "point cloud processing", "point cloud segmentation"
+  ],
+  "keywords": [
+    ["Gaussian splats", "CAD import pipeline", "Unity runtime", "spatial collision detection",
+     "walkable 3D environments", "industrial digital twins", "3D visualization",
+     "mesh processing", "LiDAR", "photogrammetry", "3D reconstruction", "XR development"],
+    ["neural networks", "CNN", "GAN", "CycleGAN", "Pix2Pix", "RegGAN", "generative AI",
+     "LLM", "large language models", "model training", "hyperparameter tuning",
+     "semantic segmentation", "clustering", "RANSAC", "Open3D", "PyTorch",
+     "medical imaging AI", "virtual staining"],
+    ["Flask", "REST API", "PostgreSQL", "MySQL", "Oracle", "SQL", "web development",
+     "backend developer", "Angular", "TypeScript", "JavaScript", "HTML", "CSS",
+     "PHP", "WPF", "WinForms", ".NET", "C++", "ImGui", "desktop applications"],
+    ["DevOps", "MLOps", "CI/CD", "GitHub Actions", "Git", "automation", "PowerShell",
+     "scripting", "Power BI", "Crystal Reports", "data analysis", "data visualization",
+     "ETL", "database design", "software testing", "regression testing"],
+    ["cybersecurity", "security analyst", "SIEM", "IBM QRadar", "CrowdStrike",
+     "threat detection", "incident response", "OSINT", "network security",
+     "web application security", "cryptography", "secure development"]
+  ]
+}

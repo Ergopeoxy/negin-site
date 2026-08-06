@@ -18,13 +18,21 @@
       <h1 class="hero-name">{{ profile.name }}</h1>
       <p class="hero-role">{{ profile.role }}</p>
       <p class="hero-tagline">{{ profile.tagline }}</p>
+
+       <figure class="about-meme hero-meme">
+        <img src="{{ url_for('static', filename='img/gallery/LearningFast.jpg') }}"
+             alt="Fighter pilot mid-flight reading a manual titled How to Fly"
+             loading="lazy">
+        <figcaption class="mono">me, onboarding onto any new tech stack</figcaption>
+      </figure>
+
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Work with me</a>
         <a class="btn btn-ghost" href="#experience">See my experience</a>
       </div>
       <p class="hero-availability mono">▸ {{ profile.availability }}</p>
     </div>
-    <p class="hero-hint mono" aria-hidden="true">move your mouse — the cloud reacts</p>
+    <p class="hero-hint mono" aria-hidden="true">move your mouse,  the cloud reacts  :> </p>
   </section>
 
   <!-- ================================================== modular sections -->
