@@ -51,5 +51,13 @@
   "nav": true,
   "enabled": true,
   "scan_images": "img/gallery"
+},
+{
+    "id": "music",
+    "template": "sections/music.html",
+    "title": "Music",
+    "nav": true,
+    "enabled": true,
+    "data": "music.json"
 }
 ]

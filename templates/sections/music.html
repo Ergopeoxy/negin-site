@@ -1,0 +1,21 @@
+<section class="section" id="{{ section.id }}">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="mono section-label">[ frequencies ]</span> {{ section.title }}</h2>
+    <p class="section-lede">Things I have on repeat.</p>
+    <div class="music-grid">
+      {% for track in section["items"] %}
+      <figure class="card music-item">
+        <div class="music-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/{{ track.id }}"
+            title="{{ track.title }}"
+            loading="lazy"
+            allow="accelerometer; encrypted-media; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <figcaption class="mono">{{ track.title }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

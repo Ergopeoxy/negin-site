@@ -75,5 +75,13 @@
     });
   }
 
+  document.querySelectorAll("#writings-book .page-scroll").forEach(function (area) {
+        ["touchstart", "touchmove", "pointerdown", "pointermove", "wheel"].forEach(function (evt) {
+          area.addEventListener(evt, function (e) {
+            e.stopPropagation();
+          }, { passive: evt !== "touchmove" });
+        });
+      });
+
 
 })();
