@@ -739,3 +739,63 @@ a:hover { text-decoration: underline; }
 }
 .page-scroll::-webkit-scrollbar { width: 6px; }
 .page-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+
+/* ------------------------------------------------------------ side rail */
+.side-rail {
+  position: fixed;
+  right: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  z-index: 20;
+  padding: 0.6rem 0.4rem;
+}
+.rail-dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--muted);
+  transform: rotate(45deg);          /* diamond, matches your timeline markers */
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.rail-dot:hover {
+  border-color: var(--cyan);
+  transform: rotate(45deg) scale(1.25);
+}
+.rail-dot.active {
+  border-color: var(--cyan);
+  background: var(--cyan);
+  box-shadow: 0 0 10px rgba(63, 224, 230, 0.6);
+}
+.rail-label {
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: center;
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.rail-dot:hover .rail-label { color: var(--cyan); }
+.rail-dot.active .rail-label { color: var(--cyan); }
+.rail-indicator {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: linear-gradient(var(--cyan), transparent);
+  transform: translateX(-50%);
+  transition: top 0.45s cubic-bezier(0.34, 1.3, 0.5, 1);  /* the rolling motion */
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .side-rail { display: none; }   /* too cramped on mobile; the header nav covers it */
+}
+@media (prefers-reduced-motion: reduce) {
+  .rail-indicator, .rail-dot, .rail-label { transition: none; }
+}

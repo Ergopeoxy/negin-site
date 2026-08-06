@@ -9,7 +9,15 @@
 {% endblock %}
 
 {% block content %}
-
+<nav class="side-rail" aria-label="Section navigation">
+    <div class="rail-indicator" aria-hidden="true"></div>
+    <a class="rail-dot" href="#top" data-section="top"><span class="rail-label mono">top</span></a>
+    {% for section in sections if section.nav %}
+    <a class="rail-dot" href="#{{ section.id }}" data-section="{{ section.id }}">
+      <span class="rail-label mono">{{ section.title|lower }}</span>
+    </a>
+    {% endfor %}
+  </nav>
   <!-- ================================================== hero -->
   <section class="hero" id="top">
     <div class="hero-inner">
