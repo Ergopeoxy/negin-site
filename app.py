@@ -24,7 +24,7 @@ def inject_profile():
 @app.route("/")
 def index():
     sections = load_enabled_sections()
-    writings = load_writings(limit=3)
+    writings = load_writings()
     return render_template("index.html", sections=sections, writings=writings)
 
 
