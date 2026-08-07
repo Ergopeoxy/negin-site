@@ -83,5 +83,26 @@
         });
       });
 
+    // Pull-cord light switch
+  const pull = document.getElementById("pull-light");
+  if (pull) {
+    const apply = (light) => {
+      document.body.classList.toggle("light-theme", light);
+      pull.setAttribute("aria-pressed", String(light));
+    };
+    // remember across page loads
+    apply(localStorage.getItem("theme") === "light");
+
+    pull.addEventListener("click", () => {
+      const nowLight = !document.body.classList.contains("light-theme");
+      apply(nowLight);
+      localStorage.setItem("theme", nowLight ? "light" : "dark");
+
+      pull.classList.add("pulling");
+      pull.classList.add("swing");
+      setTimeout(() => pull.classList.remove("pulling"), 160);
+      setTimeout(() => pull.classList.remove("swing"), 1100);
+    });
+  }
 
 })();

@@ -11,7 +11,19 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-
+<button class="pull-light" id="pull-light" aria-label="Toggle light theme" aria-pressed="false">
+    <svg class="pull-svg" viewBox="0 0 40 150" width="40" height="150" aria-hidden="true">
+      <!-- cord -->
+      <line class="cord" x1="20" y1="0" x2="20" y2="88" />
+      <!-- bulb -->
+      <circle class="bulb-glow" cx="20" cy="104" r="15" />
+      <circle class="bulb" cx="20" cy="104" r="11" />
+      <rect class="bulb-base" x="15" y="114" width="10" height="7" rx="1.5" />
+      <!-- pull knob -->
+      <line class="cord pull-string" x1="20" y1="121" x2="20" y2="140" />
+      <circle class="pull-knob" cx="20" cy="143" r="4" />
+    </svg>
+  </button>
   <!-- Point-cloud background: fixed canvas behind everything -->
   <canvas id="pointcloud" aria-hidden="true"></canvas>
 

@@ -12,6 +12,11 @@
      IBM Plex Sans — body
      IBM Plex Mono — labels, metadata, "machine voice"
    ========================================================================== */
+body.light-theme .site-header {
+  background: rgba(238, 241, 247, 0.82);
+}
+body.light-theme .nav-links a { color: var(--muted); }
+body.light-theme .nav-links a:hover { color: var(--cyan); }
 
 :root {
   --bg: #0A0F1E;
@@ -607,6 +612,11 @@ a:hover { text-decoration: underline; }
   border-color: var(--cyan);
   z-index: 2;
 }
+body.light-theme .lightbox {
+  background: rgba(230, 235, 245, 0.92);
+}
+body.light-theme .lightbox figcaption { color: var(--muted); }
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -743,6 +753,20 @@ a:hover { text-decoration: underline; }
 .page-scroll::-webkit-scrollbar { width: 6px; }
 .page-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
 
+body.light-theme .page {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F1F4FA 100%);
+  color: var(--text);
+}
+body.light-theme .page-cover {
+  background: linear-gradient(135deg, #EAF0FA 0%, #FFFFFF 100%);
+  border-color: rgba(14, 156, 166, 0.4);
+}
+
+body.light-theme .toc-title { color: var(--text); }
+body.light-theme .book-entry-summary { color: var(--muted); }
+body.light-theme .book-count,
+body.light-theme .page-num,
+body.light-theme .page-back { color: var(--muted); }
 /* ------------------------------------------------------------ side rail */
 .side-rail {
   position: fixed;
@@ -844,3 +868,62 @@ a:hover { text-decoration: underline; }
 @media (max-width: 900px) {
   .music-grid { grid-template-columns: 1fr; max-height: 360px; }
 }
+/* ------------------------------------------------------ pull-cord light */
+.pull-light {
+  position: fixed;
+  top: 0;
+  right: 5.5rem;
+  z-index: 60;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transform-origin: 20px 0;
+  animation: none;
+}
+.pull-light:hover { transform: none; }
+.pull-light.swing { animation: bulb-swing 1.1s ease-out; }
+
+@keyframes bulb-swing {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(9deg); }
+  45%  { transform: rotate(-6deg); }
+  70%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.pull-svg .cord { stroke: var(--muted); stroke-width: 1.5; }
+.pull-svg .bulb {
+  fill: #2a3550;                    /* off state */
+  transition: fill 0.3s ease;
+}
+.pull-svg .bulb-base { fill: var(--muted); }
+.pull-svg .bulb-glow {
+  fill: var(--cyan);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.pull-svg .pull-knob { fill: var(--cyan); }
+.pull-string { transition: transform 0.15s ease; }
+
+/* bulb "on" appearance while in light mode */
+body.light-theme .pull-svg .bulb { fill: #FFD65C; }
+body.light-theme .pull-svg .bulb-glow { fill: #FFD65C; opacity: 0.55; }
+
+/* the string yanking down when clicked */
+.pull-light.pulling .pull-string,
+.pull-light.pulling .pull-knob { transform: translateY(8px); }
+
+/* ---- LIGHT THEME ---- */
+body.light-theme {
+  --bg: #EEF1F7;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-solid: #FFFFFF;
+  --line: #C8D2E4;
+  --text: #1A2238;
+  --muted: #5A6685;
+  --cyan: #0E9CA6;
+  --cyan-dim: rgba(14, 156, 166, 0.12);
+  --violet: #6B3FD4;
+}
+body.light-theme .hero-name { text-shadow: 0 0 26px rgba(14, 156, 166, 0.18); }
