@@ -933,3 +933,33 @@ body.light-theme {
   --violet: #6B3FD4;
 }
 body.light-theme .hero-name { text-shadow: 0 0 26px rgba(14, 156, 166, 0.18); }
+
+/* -------------------------------------------------------------------- lounge teaser */
+.lounge-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+  color: var(--text);
+  overflow: hidden;
+}
+.lounge-teaser:hover { text-decoration: none; transform: translateY(-3px); }
+.lounge-teaser h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+.lounge-teaser p { color: var(--muted); margin: 0 0 0.8rem; max-width: 34rem; }
+.lounge-teaser-cta { color: var(--cyan); font-size: 0.85rem; }
+.lounge-teaser-glow {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 18px rgba(255, 138, 43, 0.6));
+  animation: flicker 2.5s ease-in-out infinite;
+}
+@keyframes flicker {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+@media (max-width: 600px) { .lounge-teaser-glow { display: none; } }
+@media (prefers-reduced-motion: reduce) { .lounge-teaser-glow { animation: none; } }

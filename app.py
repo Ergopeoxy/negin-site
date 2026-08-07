@@ -32,6 +32,10 @@ def index():
 def writings_index():
     return render_template("writings_index.html", writings=load_writings())
 
+@app.route("/lounge/")
+def lounge():
+    return render_template("lounge.html")
+
 
 @app.route("/writings/<slug>/")
 def writing_post(slug):

@@ -59,5 +59,12 @@
     "nav": true,
     "enabled": true,
     "data": "music.json"
-}
+},
+{
+    "id": "lounge_teaser",
+    "template": "sections/lounge_teaser.html",
+    "title": "The Lounge",
+    "nav": true,
+    "enabled": true
+  }
 ]
