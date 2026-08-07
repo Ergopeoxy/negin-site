@@ -17,7 +17,10 @@ body.light-theme .site-header {
 }
 body.light-theme .nav-links a { color: var(--muted); }
 body.light-theme .nav-links a:hover { color: var(--cyan); }
-
+body.light-theme .nav-links {
+  background: rgba(238, 241, 247, 0.97);
+  border-bottom-color: var(--line);
+}
 :root {
   --bg: #0A0F1E;
   --surface: rgba(16, 26, 48, 0.72);
@@ -122,7 +125,10 @@ a:hover { text-decoration: underline; }
 .nav-cta { color: var(--cyan) !important; }
 
 .nav-toggle { display: none; }
-
+body.light-theme .nav-links {
+  background: rgba(238, 241, 247, 0.97);
+  border-bottom-color: var(--line);
+}
 /* -------------------------------------------------------------------- hero */
 .hero {
   min-height: 88vh;
