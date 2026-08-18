@@ -36,5 +36,5 @@ window.PLACES = [
       { name: "Bandar Anzali", lat: 37.4720, lon: 49.4622, wiki: "Bandar-e Anzali", text: "Caspian port and lagoon." },
       { name: "Kish", lat: 26.5578, lon: 53.9807, wiki: "Kish Island", text: "Island in the Persian Gulf." },
       { name: "Koohrang", lat: 32.4372, lon: 50.1216, wiki: "Kuhrang County", text: "Mountains and springs." },
-      { name: "Bandar Abbas", lat: 27.1832, lon: 56.2666, wiki: "Bandar Abbas", text: "Southern port on the Gulf." }
+      { name: "Bandar Abbas", lat: 27.1832, lon: 56.2666, wiki: "Bandar Abbas", text: "Southern port on the Persian Gulf." }
     ];
