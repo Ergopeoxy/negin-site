@@ -10,8 +10,9 @@ window.PLACES = [
       { name: "Cape Breton", lat: 46.1368, lon: -60.1942, wiki: "Cape Breton Island", text: "Cape Breton Island, Nova Scotia." },
       { name: "New Brunswick", lat: 45.9636, lon: -66.6431, wiki: "Fredericton", text: "The Maritimes." },
       { name: "Halifax", lat: 44.6488, lon: -63.5752, wiki: "Halifax, Nova Scotia", text: "Harbour town." },
+      { name: "Niagara Falls", lat: 43.0962, lon: -79.0377, wiki: "Niagara Falls", text: "The falls up close . Worth the mist." },
       // ---- Italy ----
-            { name: "Florence", lat: 43.7696, lon: 11.2558, wiki: "Florence", text: "Renaissance everywhere you look." },
+      { name: "Florence", lat: 43.7696, lon: 11.2558, wiki: "Florence", text: "Renaissance everywhere you look." },
       { name: "Venice", lat: 45.4408, lon: 12.3155, wiki: "Venice", text: "Canals, no cars, getting happily lost." },
       { name: "Pisa", lat: 43.7228, lon: 10.4017, wiki: "Pisa", text: "The leaning tower and Tuscan afternoons." },
       { name: "Rome", lat: 41.9028, lon: 12.4964, wiki: "Rome", text: "Too much gelato, zero regrets." },
