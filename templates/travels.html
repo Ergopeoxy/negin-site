@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places I've Been — {{ profile.name if profile else 'Travels' }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/travels.css') }}">
+</head>
+<body>
+
+  <canvas id="globe"></canvas>
+  <div class="g-title"><h1>Places I've Been</h1><p>drag to spin · scroll to zoom · hover a pin</p></div>
+  <p class="g-hint">every pin is a place — hover to peek</p>
+
+  <div id="card">
+    <div class="c-imgwrap"><span class="c-loading">loading…</span></div>
+    <div class="c-place"></div>
+    <div class="c-text"></div>
+    <div class="c-credit"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="{{ url_for('static', filename='js/travels.data.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/travels.js') }}"></script>
+</body>
+</html>

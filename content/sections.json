@@ -66,5 +66,12 @@
     "title": "The Lounge",
     "nav": true,
     "enabled": true
+  },
+  {
+    "id": "travels",
+    "template": "sections/travels.html",
+    "title": "Places I've Been",
+    "nav": true,
+    "enabled": true
   }
 ]

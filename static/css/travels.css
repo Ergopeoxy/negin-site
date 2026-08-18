@@ -1,0 +1,25 @@
+:root { --paper: #f6efe0; --ink: #2b2416; --pin: #b02a26; --font-mono: "IBM Plex Mono", monospace; --font-hand: "Caveat", cursive; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body { background: radial-gradient(ellipse at 50% 40%, #10141f 0%, #05070d 80%); font-family: var(--font-mono); }
+#globe { position: fixed; inset: 0; z-index: 0; cursor: grab; touch-action: none; }
+#globe:active { cursor: grabbing; }
+#globe.pointing { cursor: pointer; }
+
+.g-title { position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 5; text-align: center; pointer-events: none; }
+.g-title h1 { color: #e8ecf5; font-size: 1rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+.g-title p { color: #7d8aa5; font-size: 0.66rem; margin-top: 0.2rem; }
+.g-hint { position: fixed; bottom: 0.9rem; left: 50%; transform: translateX(-50%); z-index: 5; color: #6d7a95; font-size: 0.68rem; opacity: 0.6; pointer-events: none; }
+
+#card {
+  position: fixed; z-index: 10; width: 220px; display: none;
+  background: var(--paper); color: var(--ink); border-radius: 4px; padding: 10px 10px 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.55); transform: translate(-50%, -100%) rotate(-2deg); pointer-events: none;
+}
+#card::before { content: ""; position: absolute; top: -7px; left: 50%; transform: translateX(-50%); width: 13px; height: 13px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #d6b46a, #8a6a2a); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
+#card .c-imgwrap { width: 100%; height: 130px; border-radius: 2px; overflow: hidden; background: #cfc4ac url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23cfc4ac'/%3E%3C/svg%3E") center/cover; display: flex; align-items: center; justify-content: center; }
+#card .c-imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#card .c-loading { font-size: 0.62rem; color: #8a7d60; letter-spacing: 0.05em; }
+#card .c-place { font-family: var(--font-hand); font-size: 1.5rem; line-height: 1; margin-top: 8px; color: #1f1a10; }
+#card .c-text { font-size: 0.72rem; line-height: 1.4; margin-top: 4px; color: #5b4f38; }
+#card .c-credit { font-size: 0.55rem; color: #a2977c; margin-top: 5px; }

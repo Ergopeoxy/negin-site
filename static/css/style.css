@@ -963,3 +963,20 @@ body.light-theme .hero-name { text-shadow: 0 0 26px rgba(14, 156, 166, 0.18); }
 }
 @media (max-width: 600px) { .lounge-teaser-glow { display: none; } }
 @media (prefers-reduced-motion: reduce) { .lounge-teaser-glow { animation: none; } }
+
+.globe-frame-wrap {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #05070d;
+}
+.globe-frame {
+  display: block;
+  width: 100%;
+  height: 560px;
+  border: 0;
+}
+@media (max-width: 600px) {
+  .globe-frame { height: 420px; }
+}
