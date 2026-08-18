@@ -103,6 +103,23 @@
       setTimeout(() => pull.classList.remove("pulling"), 160);
       setTimeout(() => pull.classList.remove("swing"), 1100);
     });
+
+
+      // Personal dropdown
+  var drop = document.querySelector(".nav-drop-toggle");
+  if (drop) {
+    var menu = drop.parentElement.querySelector(".nav-drop-menu");
+    drop.addEventListener("click", function (e) {
+      e.preventDefault();
+      var open = menu.classList.toggle("open");
+      drop.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", function (e) {
+      if (!drop.parentElement.contains(e.target)) { menu.classList.remove("open"); drop.setAttribute("aria-expanded", "false"); }
+    });
+  }
+
+
   }
 
 })();

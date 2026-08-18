@@ -23,13 +23,6 @@
     "data": "skills.json"
   },
   {
-    "id": "writings",
-    "template": "sections/writings.html",
-    "title": "Writings",
-    "nav": true,
-    "enabled": true
-  },
-  {
     "id": "education",
     "template": "sections/education.html",
     "title": "Education",
@@ -37,7 +30,7 @@
     "enabled": true,
     "data": "education.json"
   },
-  {
+    {
     "id": "contact",
     "template": "sections/contact.html",
     "title": "Contact",
@@ -45,12 +38,22 @@
     "enabled": true
   },
   {
+    "id": "writings",
+    "template": "sections/writings.html",
+    "title": "Writings",
+    "nav": true,
+    "enabled": true,
+    "group": "personal"
+  },
+
+  {
   "id": "gallery",
   "template": "sections/gallery.html",
   "title": "Gallery",
   "nav": true,
   "enabled": true,
-  "scan_images": "img/gallery"
+  "scan_images": "img/gallery",
+   "group": "personal"
 },
 {
     "id": "music",
@@ -58,20 +61,23 @@
     "title": "Music",
     "nav": true,
     "enabled": true,
-    "data": "music.json"
+    "data": "music.json",
+     "group": "personal"
 },
 {
     "id": "lounge_teaser",
     "template": "sections/lounge_teaser.html",
     "title": "The Lounge",
     "nav": true,
-    "enabled": true
+    "enabled": true,
+     "group": "personal"
   },
   {
     "id": "travels",
     "template": "sections/travels.html",
     "title": "Places I've Been",
     "nav": true,
-    "enabled": true
+    "enabled": true,
+     "group": "personal"
   }
 ]

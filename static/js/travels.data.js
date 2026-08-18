@@ -1,4 +1,4 @@
-// Travel destinations data — edit this list to add/remove pins.
+
 // Each: { name, lat, lon, wiki, image?, text }
 window.PLACES = [
       // ---- Canada ----
@@ -11,7 +11,9 @@ window.PLACES = [
       { name: "New Brunswick", lat: 45.9636, lon: -66.6431, wiki: "Fredericton", text: "The Maritimes." },
       { name: "Halifax", lat: 44.6488, lon: -63.5752, wiki: "Halifax, Nova Scotia", text: "Harbour town." },
       // ---- Italy ----
-      { name: "Naples", lat: 40.8518, lon: 14.2681, wiki: "Naples", text: "The home of pizza." },
+            { name: "Florence", lat: 43.7696, lon: 11.2558, wiki: "Florence", text: "Renaissance everywhere you look." },
+      { name: "Venice", lat: 45.4408, lon: 12.3155, wiki: "Venice", text: "Canals, no cars, getting happily lost." },
+      { name: "Pisa", lat: 43.7228, lon: 10.4017, wiki: "Pisa", text: "The leaning tower and Tuscan afternoons." },
       { name: "Rome", lat: 41.9028, lon: 12.4964, wiki: "Rome", text: "Too much gelato, zero regrets." },
       // ---- Spain ----
       { name: "Barcelona", lat: 41.3874, lon: 2.1686, wiki: "Barcelona", text: "Gaudí and the sea." },

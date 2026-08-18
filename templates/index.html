@@ -1,11 +1,21 @@
 {% extends "base.html" %}
 
 {% block nav %}
-  {# Nav is generated from the enabled sections that opted into it #}
-  {% for section in sections if section.nav %}
-  <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+  <li class="nav-dropdown">
+    <button class="nav-drop-toggle" aria-expanded="false">personal ▾</button>
+    <ul class="nav-drop-menu">
+      {% for section in sections if section.nav and section.group == 'personal' %}
+      <li><a href="#{{ section.id }}">{{ section.title|lower }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
+
+  {% set ns = namespace(first=true) %}
+  {% for section in sections if section.nav and section.group != 'personal' %}
+  <li {% if ns.first %}class="nav-pro-start"{% endif %}><a href="#{{ section.id }}">{{ section.title|lower }}</a></li>
+  {% set ns.first = false %}
   {% endfor %}
-  <li><a href="{{ url_for('writings_index') }}" class="nav-cta">All writings ↗</a></li>
+  <!-- <li><a href="{{ url_for('writings_index') }}" class="nav-cta">all writings ↗</a></li> -->
 {% endblock %}
 
 {% block content %}
