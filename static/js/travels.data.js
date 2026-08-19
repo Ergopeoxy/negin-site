@@ -40,5 +40,10 @@ window.PLACES = [
       { name: "Bandar Anzali", lat: 37.4720, lon: 49.4622, wiki: "Bandar-e Anzali", text: "Caspian port and lagoon." },
       { name: "Kish", lat: 26.5578, lon: 53.9807, wiki: "Kish Island", text: "Island in the Persian Gulf." },
       { name: "Koohrang", lat: 32.4372, lon: 50.1216, wiki: "Kuhrang County", text: "Mountains and springs." },
-      { name: "Bandar Abbas", lat: 27.1832, lon: 56.2666, wiki: "Bandar Abbas", text: "Southern port on the Persian Gulf." }
+      { name: "Bandar Abbas", lat: 27.1832, lon: 56.2666, wiki: "Bandar Abbas", text: "Southern port on the Persian Gulf." },
+      { name: "Shahr-e Kord", lat: 32.3256, lon: 50.8644, wiki: "Shahr-e Kord", text: "The high city — coldest provincial capital." },
+      { name: "Chadegan", lat: 32.7714, lon: 50.6291, wiki: "Chadegan", text: "Lakeside town by the Zayanderud." },
+      { name: "Shiraz", lat: 29.5918, lon: 52.5837, wiki: "Shiraz", text: "Poets, gardens, and Persepolis nearby." },
+      { name: "Chalous", lat: 36.6551, lon: 51.4204, wiki: "Chalous", text: "The mountain road down to the Caspian." },
+      { name: "Kashan", lat: 33.9850, lon: 51.4100, wiki: "Kashan", text: "Rosewater, old houses, and desert light." },
     ];
