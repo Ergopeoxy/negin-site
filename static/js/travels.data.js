@@ -19,6 +19,9 @@ window.PLACES = [
       // ---- Spain ----
       { name: "Barcelona", lat: 41.3874, lon: 2.1686, wiki: "Barcelona", text: "Gaudí and the sea." },
       { name: "Madrid", lat: 40.4168, lon: -3.7038, wiki: "Madrid", text: "Late nights and tapas." },
+      //--- Turkey ----
+      { name: "Istanbul", lat: 41.0082, lon: 28.9784, wiki: "Istanbul", text: "Where two continents meet." },
+      { name: "Kuşadası", lat: 37.8600, lon: 27.2597, wiki: "Kuşadası", text: "Aegean coast and blue water." },
       // ---- Malaysia ----
       { name: "Kuala Lumpur", lat: 3.1390, lon: 101.6869, wiki: "Kuala Lumpur", text: "Twin towers and street food." },
       { name: "Shah Alam", lat: 3.0733, lon: 101.5185, wiki: "Shah Alam", text: "The blue mosque city." },
