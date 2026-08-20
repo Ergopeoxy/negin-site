@@ -47,6 +47,9 @@ def writing_post(slug):
         abort(404)
     return render_template("writing_post.html", post=post)
 
+@app.route("/isfahan/")
+def isfahan():
+    return render_template("isfahan.html")
 
 @app.route("/sitemap.xml")
 def sitemap():

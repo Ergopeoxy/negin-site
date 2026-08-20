@@ -1,5 +1,7 @@
 [
-  { "src": "img/gallery/ori.jpg", "caption": "My cat, chief debugging officer: Ori" },
-  { "src": "img/gallery/thorin.jpg", "caption": "My other cat, chief security officer: Thorin" },
-  { "src": "img/gallery/LearningFast.jpg", "caption": "onboarding onto any new tech stack" }
+  { "src": "img/gallery/2_ori.jpg", "caption": "My cat, chief debugging officer: Ori" },
+  { "src": "img/gallery/3_thorin.jpg", "caption": "My other cat, chief security officer: Thorin" },
+  { "src": "img/gallery/4_LearningFast.jpg", "caption": "onboarding onto any new tech stack" },
+  { "src": "img/gallery/1_Isfahan.webp", "caption": "The city I was born .  It is widely known as the cultural and artistic heart of Iran, often called 'Nesf-e Jahan' (Half the World) for its unmatched beauty. You can think of it as the Rome of the East." },
+  { "src": "img/gallery/thorin.jpg", "caption": "My other cat, chief security officer: Thorin" }
 ]
