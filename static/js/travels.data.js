@@ -46,4 +46,5 @@ window.PLACES = [
       { name: "Shiraz", lat: 29.5918, lon: 52.5837, wiki: "Shiraz", text: "Poets, gardens, and Persepolis nearby." },
       { name: "Chalous", lat: 36.6551, lon: 51.4204, wiki: "Chalous", text: "The mountain road down to the Caspian." },
       { name: "Kashan", lat: 33.9850, lon: 51.4100, wiki: "Kashan", text: "Rosewater, old houses, and desert light." },
+      { name: "Point Nemo", lat: -48.8767, lon: -123.3933, wiki: "", image: "/static/img/travels/laughing-cat.jpg", text: "Joking I have not been here :)  Fun fact: here you're closer to space than to any land. The nearest humans are usually the astronauts on the ISS overhead." },
     ];
