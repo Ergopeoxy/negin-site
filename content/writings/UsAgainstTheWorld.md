@@ -17,6 +17,4 @@ In the end, family stays.
 
 Maybe that is enough. If the whole world turns unfamiliar, I will still have my little family, carrying our own piece of home with us wherever life takes us.
 
-My mom, my dad, my brother, my two cats, and me against the world.
-
 And if one day it really is just us against the whole world, then so be it.
