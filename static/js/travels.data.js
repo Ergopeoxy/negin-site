@@ -50,6 +50,7 @@ window.PLACES = [
 
 { name: "Montreal", lat: 45.5017, lon: -73.5673, wiki: "Montreal", text: "Old-world streets and a great food scene." },
       { name: "Quebec City", lat: 46.8139, lon: -71.2080, wiki: "Quebec City", text: "The walled old town — like a slice of Europe." },
+{ name: "Bali", lat: -8.4095, lon: 115.1889, wiki: "Bali", text: "Temples, rice terraces, and the sound of the sea." },
 
 
     ];
