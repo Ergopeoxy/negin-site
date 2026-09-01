@@ -51,18 +51,84 @@ def writing_post(slug):
 def isfahan():
     return render_template("isfahan.html")
 
+# @app.route("/sitemap.xml")
+# def sitemap():
+#     """Generated on the fly — tells Google every page on the site."""
+#     pages = [url_for("index", _external=True),
+#              url_for("writings_index", _external=True)]
+#     pages += [url_for("writing_post", slug=p["slug"], _external=True)
+#               for p in load_writings()]
+#     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+#     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+#     xml += "".join(f"<url><loc>{u}</loc></url>\n" for u in pages)
+#     xml += "</urlset>"
+#     return Response(xml, mimetype="application/xml")
+
+from flask import Flask, render_template, Response, request, url_for
+from pathlib import Path
+# you already import your loaders somewhere; make sure these are available:
+from content.loader import load_enabled_sections, load_writings
+
 @app.route("/sitemap.xml")
 def sitemap():
-    """Generated on the fly — tells Google every page on the site."""
-    pages = [url_for("index", _external=True),
-             url_for("writings_index", _external=True)]
-    pages += [url_for("writing_post", slug=p["slug"], _external=True)
-              for p in load_writings()]
-    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    xml += "".join(f"<url><loc>{u}</loc></url>\n" for u in pages)
-    xml += "</urlset>"
-    return Response(xml, mimetype="application/xml")
+    base = request.url_root.rstrip("/")
+
+    # --- standalone pages (their own routes) ---
+    # (endpoint name, path) — edit if your route paths differ
+    standalone = [
+        "/",              # homepage
+        "/travels/",
+        "/isfahan-diorama/",
+        "/library/",
+        "/lounge/",
+        "/remembrance/",
+        "/writings/",     # the all-writings index page
+    ]
+
+    urls = []
+
+    # homepage carries the profile image so Google can index it
+    urls.append({
+        "loc": f"{base}/",
+        "img": f"{base}/static/img/negin.jpg",   # <-- your real profile image path
+        "img_title": "Negin Amou",
+    })
+
+    # the rest of the standalone pages
+    for path in standalone:
+        if path == "/":
+            continue
+        urls.append({"loc": f"{base}{path}"})
+
+    # --- every writing, pulled automatically ---
+    # load_writings() should return your writing objects; we use each slug.
+    try:
+        for w in load_writings():
+            slug = w.get("slug") or w.get("id")
+            if slug:
+                urls.append({"loc": f"{base}/writings/{slug}/"})
+    except Exception:
+        pass  # if writings can't load, still return a valid sitemap
+
+    # --- build the XML ---
+    parts = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+    ]
+    for u in urls:
+        parts.append("  <url>")
+        parts.append(f"    <loc>{u['loc']}</loc>")
+        if u.get("img"):
+            parts.append("    <image:image>")
+            parts.append(f"      <image:loc>{u['img']}</image:loc>")
+            if u.get("img_title"):
+                parts.append(f"      <image:title>{u['img_title']}</image:title>")
+            parts.append("    </image:image>")
+        parts.append("  </url>")
+    parts.append("</urlset>")
+
+    return Response("\n".join(parts), mimetype="application/xml")
 
 
 @app.route("/robots.txt")
