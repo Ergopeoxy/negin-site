@@ -4,6 +4,8 @@ Run:  pip install -r requirements.txt
       flask run          (or: python app.py)
 """
 from flask import Flask, render_template, abort, Response, request, url_for
+from pathlib import Path
+from content.loader import load_enabled_sections, load_writings
 
 from content.loader import (
     load_profile,
@@ -64,10 +66,9 @@ def isfahan():
 #     xml += "</urlset>"
 #     return Response(xml, mimetype="application/xml")
 
-from flask import Flask, render_template, Response, request, url_for
-from pathlib import Path
-# you already import your loaders somewhere; make sure these are available:
-from content.loader import load_enabled_sections, load_writings
+
+
+
 
 @app.route("/sitemap.xml")
 def sitemap():
