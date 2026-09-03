@@ -7,6 +7,7 @@ from flask import Flask, render_template, abort, Response, request, url_for
 from pathlib import Path
 from content.loader import load_enabled_sections, load_writings
 from flask import send_from_directory
+import os
 from content.loader import (
     load_profile,
     load_enabled_sections,
@@ -31,8 +32,11 @@ def index():
 
 @app.route("/favicon.ico")
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, "static", "img"),
-                               "favicon.ico", mimetype="image/vnd.microsoft.icon")
+    return send_from_directory(
+        os.path.join(app.root_path, "static", "img"),
+        "favicon.ico",
+        mimetype="image/vnd.microsoft.icon"
+    )
 
 @app.route("/writings/")
 def writings_index():
